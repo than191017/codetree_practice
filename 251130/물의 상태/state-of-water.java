@@ -9,10 +9,10 @@ public class Main {
         if (n > 100){
             System.out.println("vapor");
             }
-            else if (n < 0){
-                System.out.println("ice");}
+            else if (n > 0 ){
+                System.out.println("water");}
             else {
-                System.out.println("water");
+                System.out.println("ice");
         }
 
 
