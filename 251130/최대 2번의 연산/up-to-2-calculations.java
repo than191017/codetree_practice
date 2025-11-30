@@ -10,7 +10,8 @@ public class Main {
         }
 
         if (a % 2 != 0) {
-            System.out.println((a+1)/2);
+            a = (a+1)/2;
         }
+        System.out.println(a);
     }
 }
