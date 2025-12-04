@@ -10,9 +10,13 @@ public class Main {
             }
         
         else {
-            if (n % 2 == 0) {
+            if (n == 1) {
+                System.out.println(31);
+            }
+            else if (n % 2 == 0){
                 System.out.println(30);
             }
+            
             else {
                 System.out.println(31);
             }
