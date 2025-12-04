@@ -1,23 +1,27 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-        int d = sc.nextInt();
+       Scanner sc = new Scanner(System.in);
 
-        if ( (b > a) ) {
-            System.out.println("B");
+        int a1= sc.nextInt();
+        int a2= sc.nextInt();
+
+        int b1= sc.nextInt();
+        int b2= sc.nextInt();
+
+        if (a1>b1) {
+            System.out.print("A");
         }
-        else if ((a == b) && (d > c)) {
-            System.out.println("B");
+        else if (a1<b1){
+            System.out.print("B");
         }
-        else if ((a == b) && (d <= c)) { 
-            System.out.println("A");
+        else if (a1 == b1 && a2>b2) {
+            System.out.print("A");
         }
-        else {
-            System.out.println("A");
+         else if (a1 == b1 && a2<b2) {
+            System.out.print("B");
         }
+
     }
 }
