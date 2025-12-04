@@ -10,8 +10,12 @@ public class Main {
         if ( (b > a) ) {
             System.out.println("B");
         }
-        else if ((a == b) && (d > c) )
+        else if ((a == b) && (d > c)) {
             System.out.println("B");
+        }
+        else if ((a == b) && (d <= c)) { 
+            System.out.println("A");
+        }
         else {
             System.out.println("A");
         }
