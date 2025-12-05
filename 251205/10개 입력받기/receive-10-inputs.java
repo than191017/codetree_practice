@@ -18,7 +18,7 @@ public class Main {
             if(arr[i] == 0)
                 break;
         }
-        float avg = (float)(sum /(cnt-1));
+        double avg = (double)(sum /(cnt-1));
         System.out.print(sum + " ");
         System.out.printf("%.1f",avg);
     }
