@@ -4,30 +4,28 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // 변수 선언
-        int n = sc.nextInt(); // 학생 수
+        int n = sc.nextInt();
+        int jumsu[] = new int[4]; // 4개의 정수값 저장
+        int sum;
+        double avg;
         int cnt = 0;
-        int sum = 0;
 
-        // 정수 10개 입력받을 배열 생성
-        int arr[] = new int[4];
-
-        // 배열에 정수 입력받기
         for (int i = 0; i < n; i++) {
-            for (int a = 0; a < 4; a++) {
-                arr[a] = sc.nextInt();
-                sum += arr[a];
+            sum = 0;
+            for (int j = 0; j < 4; j++) {
+                jumsu[j] = sc.nextInt();
+                sum += jumsu[j];
             }
-
-            double avg = (double) sum / 4;
-
+            avg = (double) sum / 4; // int에서 double로 수정
             if (avg >= 60) {
-                cnt ++;
                 System.out.println("pass");
+                cnt++;
             } else {
                 System.out.println("fail");
             }
         }
+
         System.out.println(cnt);
     }
 }
+
