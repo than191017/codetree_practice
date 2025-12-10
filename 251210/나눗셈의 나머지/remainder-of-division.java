@@ -13,9 +13,8 @@ public class Main {
         int[] arr = new int[100];
 
         for (int i = 0; i < 100; i++) {
-
-            a = (int) a / b;
             tmp = (int) a % b;
+            a = (int) a / b;
             arr[tmp] += 1;
 
             if(a == 0){
