@@ -7,15 +7,14 @@ public class Main {
 
         int a = sc.nextInt();
         int b = sc.nextInt();
-        int tmp = 0;
         int sum = 0;
 
-        int[] arr = new int[b];  // b 크기로 충분합니다 (나머지는 0~b-1)
+        int[] arr = new int[b];
 
-        while (a >= 1) {  // a가 1 미만이 될 때까지
-            tmp = a % b;      // 먼저 나머지 구하기
-            arr[tmp] += 1;    // 나머지 카운트
-            a = a / b;        // 그 다음 몫 구하기
+        while (a > 0) {
+            int remainder = a % b;
+            arr[remainder]++;
+            a = a / b;
         }
 
         for (int j = 0; j < b; j++) {
@@ -23,6 +22,5 @@ public class Main {
         }
 
         System.out.println(sum);
-
     }
 }
