@@ -14,8 +14,8 @@ public class Main {
 
         for (int i = 0; i < 100; i++) {
 
-            a = a/b;
-            tmp = a%b;
+            a = (int) a / b;
+            tmp = (int) a % b;
             arr[tmp] += 1;
 
             if(a == 0){
