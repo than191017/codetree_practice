@@ -2,25 +2,32 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
+
         int a = sc.nextInt();
         int b = sc.nextInt();
+        int tmp = 0;
+        int sum = 0;
+
         int[] arr = new int[100];
-        int[] cnt = new int[100];
-        
-        for (int i = 1; i < 100; i++) {
-            arr[i] += a%b;
-            cnt[arr[i]]++;
-            a/=b;
-            if (a == 0) {
+
+        for (int i = 0; i < 100; i++) {
+
+            a = a/b;
+            tmp = a%b;
+            arr[tmp] += 1;
+
+            if(a == 0){
                 break;
             }
         }
 
-        int sum  = 0;
-         for (int i = 0; i < b; i++) {  
-            sum += cnt[i] * cnt[i];
+        for (int j = 0; j < 100; j++) {
+            sum += arr[j]*arr[j];
         }
-        System.out.print(sum + " ");
+
+        System.out.println(sum);
+
     }
 }
