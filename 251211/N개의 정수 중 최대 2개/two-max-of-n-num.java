@@ -19,10 +19,11 @@ public class Main {
         for (int i = 0; i < n; i++) {
             if (arr[i] > max) {
                 // 새로운 최댓값 발견
-                secondMax = max;  // 기존 max를 secondMax로
-                max = arr[i];      // 새로운 값을 max로
-            } else if (arr[i] > secondMax && arr[i] < max) {
-                // max보다 작지만 secondMax보다 큰 경우
+                secondMax = max;
+                max = arr[i];
+            } else if (arr[i] > secondMax) {
+                // max보다 작거나 같지만 secondMax보다 큰 경우
+                // (같은 값도 허용)
                 secondMax = arr[i];
             }
         }
