@@ -6,17 +6,15 @@ public class Main {
         int cnt = 0;
         int[] arr = new int[n];
 
-        for (int i = 0 i <n; i++){
+        for (int i = 0; i <n; i++){
             arr[i] = sc.nextInt();
             if (arr[i] == 2){
                 cnt ++;
                 if (cnt == 3){
-                    System.out.println(i);
+                    System.out.println((i+1));
                     break;
                 }
             }
         }
     }
 }
-
->> 2
