@@ -5,29 +5,22 @@ public class Main {
         int n = sc.nextInt();
         int[] arr = new int[n];
 
-        int max = 0;      // 500 미만 최댓값
-        int min = Integer.MAX_VALUE;
-        int cnt = 0;
-
         for (int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
-            if (min > arr[i] ){
-                min = arr[i];
-                cnt = i;
+        }
+
+        int maxProfit = 0;
+
+        // 모든 (사는 날, 파는 날) 조합 확인
+        for (int i = 0; i < n - 1; i++){      // 사는 날
+            for (int j = i + 1; j < n; j++){  // 파는 날 (사는 날 이후)
+                int profit = arr[j] - arr[i];
+                if (profit > maxProfit){
+                    maxProfit = profit;
+                }
             }
         }
 
-        for (int i = cnt; i < n; i++){
-            if (min < arr[i]){
-                max = arr[i];
-            }
-        }
-
-        if ((max-min) > 0){
-            System.out.print((max-min));
-        }
-        else {
-            System.out.print(0);
-        }
+        System.out.print(maxProfit);
     }
 }
