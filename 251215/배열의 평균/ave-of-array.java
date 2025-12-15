@@ -22,8 +22,10 @@ public class Main {
             System.out.printf("%.1f" , (double)(horSum/4));
             System.out.print(" ");
             horSum = 0;
+            if(i == 1 && j == 3){
+                System.out.println();
+            }
         }
-        System.out.println();
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 2; j++) {
@@ -32,8 +34,10 @@ public class Main {
             System.out.printf("%.1f" , (double)(vertiSum/2));
             System.out.print(" ");
             vertiSum = 0;
+            if(i == 3 && j == 1){
+                System.out.println();
+            }
         }
-        System.out.println();
 
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 4; j++) {
